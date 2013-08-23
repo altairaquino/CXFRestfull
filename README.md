@@ -1,11 +1,11 @@
 CXFRestfull
-===========
+===========<br>
 
-CXFRestfull de Exemplo
+CXFRestfull de Exemplo<br>
 
-Exemplifica o uso do CXF para o desenvolvimento de webservices no padrão restfull (javax.ws.rs).
+Exemplifica o uso do CXF para o desenvolvimento de webservices no padrão restfull (javax.ws.rs).<br>
 
-Spring
-Mavem
-CXF
+Spring<br>
+Mavem<br>
+CXF<br>
 Jackson (JSon)
