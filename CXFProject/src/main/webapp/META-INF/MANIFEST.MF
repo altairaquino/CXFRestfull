@@ -8,5 +8,5 @@ Class-Path: cxf-rt-frontend-jaxrs-2.7.6.jar cxf-api-2.7.6.jar woodstox
  3.2.4.RELEASE.jar spring-core-3.2.4.RELEASE.jar commons-logging-1.1.1
  .jar spring-web-3.2.4.RELEASE.jar aopalliance-1.0.jar spring-aop-3.2.
  4.RELEASE.jar spring-context-3.2.4.RELEASE.jar spring-expression-3.2.
- 4.RELEASE.jar
+ 4.RELEASE.jar cxf-rt-rs-security-cors-2.6.1.jar
 
