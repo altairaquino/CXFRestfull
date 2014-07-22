@@ -5,10 +5,7 @@
 .classpath
 *.bak
 .settings/
-.settings/org.eclipse.core.resources.prefs
-.settings/org.eclipse.jdt.core.prefs
-.settings/org.eclipse.wst.common.component
-.settings/org.eclipse.wst.common.project.facet.core.xml
+
 ###################
 
 *.class
@@ -17,34 +14,16 @@
 *.o
 *.so
 
-# Packages #
-############
-# it's better to unpack these files and commit the raw source
-# git has its own built in compression methods
-*.7z
-*.dmg
-*.gz
-*.iso
-*.jar
-*.rar
-*.tar
-*.zip
-
 # Logs and databases #
 ######################
 *.log
-##*.sqlite
 
-# OS generated files #
-######################
-.DS_Store?
-ehthumbs.db
-Icon?
 Thumbs.db
 
 # Folder
 #####################
 /class
+/classes*
 **/.svn*
 /**/text-base*
 /**/.svn*
@@ -66,4 +45,3 @@ target/**/*
 
 target
 /target
-target
