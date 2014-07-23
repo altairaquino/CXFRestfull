@@ -17,6 +17,7 @@ import org.apache.cxf.rs.security.cors.CrossOriginResourceSharing;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
+import com.sample.cxf.dto.ForecastResponse;
 import com.sample.cxf.dto.JsonResponse;
 
 @CrossOriginResourceSharing(
@@ -68,9 +69,22 @@ public class RestService {
 	@GET
 	@Path("/forecasts/{painelId}")
 	@Produces(MediaType.APPLICATION_JSON)
-	public Response forecasts(@PathParam("painelId") Integer painelId) {
-		List<JsonResponse> list = new ArrayList<JsonResponse>();
+	public Response forecasts(@PathParam("painelId") Integer painelId, @Context HttpHeaders headers) {
 		try {
+			
+			if (!isValidKeyAccess(headers)){
+				return Response.status(Status.METHOD_NOT_ALLOWED).build();
+			}
+			
+			List<ForecastResponse> list = new ArrayList<ForecastResponse>();
+			
+			ForecastResponse forecastResponse = new ForecastResponse();
+			forecastResponse.setCampo1("a1");
+			forecastResponse.setCampo2("a2");
+			forecastResponse.setCampo3("a3");
+			
+			list.add(forecastResponse);
+			
 			return Response.status(Status.OK).entity(list).build();
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -82,12 +96,20 @@ public class RestService {
 	@Path("/painelInfo/{painelId}")
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response painelInfo(@PathParam("painelId") Integer painelId, @Context HttpHeaders headers) {
-		List<JsonResponse> list = new ArrayList<JsonResponse>();
 		try {
 			
 			if (!isValidKeyAccess(headers)){
 				return Response.status(Status.METHOD_NOT_ALLOWED).build();
 			}
+			
+			List<ForecastResponse> list = new ArrayList<ForecastResponse>();
+			
+			ForecastResponse forecastResponse = new ForecastResponse();
+			forecastResponse.setCampo1("a1");
+			forecastResponse.setCampo2("a2");
+			forecastResponse.setCampo3("a3");
+			
+			list.add(forecastResponse);
 			
 			return Response.status(Status.OK).entity(list).build();
 		} catch (Exception e) {

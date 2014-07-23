@@ -1,35 +1,31 @@
 package com.sample.cxf.dto;
 
-import java.util.Date;
-
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
 public class ForecastResponse {
 
-	private String name;
+	private String campo1;	
+	private String campo2;	
+	private String campo3;
 	
-	private Date date;
-	
-	public ForecastResponse(String name) {
-		setName(name);
-		setDate(new Date());
+	public String getCampo1() {
+		return campo1;
 	}
-
-	public String getName() {
-		return name;
+	public void setCampo1(String campo1) {
+		this.campo1 = campo1;
 	}
-
-	public void setName(String name) {
-		this.name = name;
+	public String getCampo2() {
+		return campo2;
 	}
-
-	public Date getDate() {
-		return date;
+	public void setCampo2(String campo2) {
+		this.campo2 = campo2;
 	}
-
-	public void setDate(Date date) {
-		this.date = date;
+	public String getCampo3() {
+		return campo3;
 	}
+	public void setCampo3(String campo3) {
+		this.campo3 = campo3;
+	}	
 	
 }
